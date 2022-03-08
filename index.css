@@ -1,5 +1,86 @@
-.bg{
+hmtl{
+    scroll-behavior: smooth;
+}
+.sectionwidth {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+}
+@font-face {
+    font-family: "Texas Tango";
+    src: url("assets/font/texas_tango/texatbold.otf"); format("otf")
+}
+
+@keyframes updown {
+    0%{
+        transform: translate(0 , 0);
+    }
+    50%{
+        transform: translate(0 , 30px);
+    }
+    100%{
+        transform: translate(0 , 0);
+    }
+}
+
+body {
+    width: 100vw;
+    height: 500vh;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.theme{
+    background-color: rgb(50, 52, 54);
+}
+
+#earthglobe {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: grayscale(50%);
+}
+
+#main{
+}
+
+
+#introtext{
+    position: relative;
+    margin-top: 10vh;
+}
+#introtext>p{
+    text-align: center;
+    color: white;
+    font-family: "Texas Tango";
+    font-size: 65px;
+}
+
+#chevron{
+    position: absolute;
+    margin-top: 30vh;
+    margin-left: 50vw;
+}
+
+.chevicon{
+    animation: updown 2s infinite;
+}
+
+#about {
+
+}
+#profilep{
+    position: absolute;
+    margin-left: 15vw;
+    margin-top: 2vh;
+    border-radius: 60%;
+    width: 15vw;
 }
