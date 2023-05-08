@@ -1,173 +1,50 @@
-hmtl{
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-.sectionwidth {
-    width: 100vw;
-    height: 100vh;
-}
 @font-face {
-    font-family: "Texas Tango";
-    src: url("assets/font/texas_tango/texatbold.otf"); format("otf")
+    font-family: Oswald;
+    src: url("assets/font/Oswald/Oswald-VariableFont_wght.ttf");
 }
-
-@keyframes updown {
-    0%{
-        transform: translate(0 , 0);
-    }
-    50%{
-        transform: translate(0 , 30px);
-    }
-    100%{
-        transform: translate(0 , 0);
-    }
-}
-
-body {
-    width: 100vw;
-    height: 500vh;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-body::-webkit-scrollbar {
-    display: none;
-}
-
-.theme{
-    background-color: rgb(50, 52, 54);
-}
-
-#earthglobe {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    filter: grayscale(50%);
-}
-
-#main{
-}
-
-
-#introtext{
-    position: relative;
-    margin-top: 10vh;
-}
-#introtext>p{
-    text-align: center;
-    color: white;
-    font-family: "Texas Tango";
-    font-size: 65px;
-}
-
-#chevron{
-    position: absolute;
-    margin-top: 30vh;
-    margin-left: 50vw;
-}
-
-.chevicon{
-    animation: updown 2s infinite;
-}
-
-#about {
-
-}
-#profilep{
-    position: absolute;
-    margin-left: 15vw;
-    margin-top: 5vh;
-    border-radius: 60%;
-    width: 15vw;
-}
-
-#skill{
-    background-image: url("assets/images/desk1.jpg");
-}
-ul{
-    position: fixed;
-    width: 6vw;
-    list-style-type: circle;
-    margin-top: 25vh;
-}
-li{
+/*html general design*/
+html,body{
     width: auto;
-    margin-top: 10px;
-    height: 35px;
-    border: white solid 1px;
-    border-radius: 25px 25px 25px 25px;
-    color: white;
-    text-align: center;
+    height: auto;
+    margin: 0;
+    font-family: Oswald, serif!important;
 }
-li>a{
-    text-decoration: none;
-    color: white;
-}
-.filler{
-    margin-left: 4rem;
-    width: 150px;
-    height: 2px;
-    border-radius: 25px 25px 25px 25px;
-    background-color: white;
+/*section class*/
+.section{
+    width: 100dvw;
+    height: 100dvh;
 }
 
-#one{
-    font-family: "Lucida Handwriting";
-    color: white;
-    position: absolute;
-    margin-left: 70vw;
-    margin-top: 8vh;
-    text-align: center;
-    width: 15vw;
-    height: 15vw;
-    background-color: rgba(134, 181, 149,0.1);
-    border-radius: 15px 15px 150px 150px;
-    filter: drop-shadow(10px 5px 2px #eb4034);
+#tracker{
+    width: 95%;
+    height: 37%;
 }
-#two{
-    font-family: "Lucida Handwriting";
-    color: white;
-    position: absolute;
-    margin-left: 50vw;
-    margin-top: 38vh;
-    text-align: center;
-    width: 15vw;
-    height: 15vw;
-    background-color: rgba(134, 181, 149,0.1);
-    border-radius: 15px 15px 150px 150px;
-    filter: drop-shadow(10px 5px 1px #eb4034);
-}
-#projects{
-    background-image: url("assets/images/projects.jpg");
+#tracker>div{
+    width: 20%;
+    border-radius:10%;
 }
 
-.title{
-    font-family: "Texas Tango";
-    text-align: center;
-    position: absolute;
-    font-size: medium;
-    margin-left: 43vw;
-    margin-top: 3vh;
-    border: white solid 1px;
-    border-radius: 10px 25px 10px 25px;
-    width: 10vw;
-    height:7vh;
-    color: white;
+#skills{
+    width: 95%;
+    height: 37%;
+}
+#skills>div{
+    width: 20%;
+    border-radius:10%;
 }
 
-#me{
-    position: absolute;
-    margin-left: 15vw;
-    margin-top: 45vh;
-    border-radius: 15px 15px 15px 15px;
-    font-family: "Lucida Handwriting";
-    text-align: center;
+#skills>div:hover{
+    width: 20%;
+    border-radius:10%;
+    background-color: cornflowerblue!important;
+}
+
+.hover-div {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
     color: white;
-    width: 15vw;
-    border: 1px solid white;
+    text-align: center;
+    line-height: 200px;
+    transition: background-color 0.3s;
 }

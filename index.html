@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
+    <meta charset="UTF-8">
     <title>Dolly Miada - Web Developer</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" type="text/css">
     <script src="https://kit.fontawesome.com/0b775db31d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 
     <script>
         $(document).ready(function(){
@@ -40,58 +44,139 @@
 
 <body>
 <script>AOS.init()</script>
-
-<ul>
-    <li><a href="#about">A propos</a></li>
-    <li><a href="#skill">Mes Compétences</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#techno">Veille Technologique</a></li>
-</ul>
-    <section id="main" class="sectionwidth">
-
-        <video id="earthglobe" autoplay loop muted>
-            <source src="assets/video/spinningglobe.mp4">
-        </video>
-
-        <div data-aos="fade-down" data-aos-duration="3000" id="introtext">
-            <p>Herilala Dolly Miada<br>-<br>Web/Mobile Developer</p>
+<!--navbar begin-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse fw-bold justify-content-end mx-5" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#intro">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">A propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experiences">Experiences & Projets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#techno">Veille technologique</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--navbar end-->
+<!--first part: Landing Screen-->
+<section class="section d-flex justify-content-around" id="intro">
+    <div class="justify-content-center py-5 my-lg-5">
+        <h1 style="font-size: 10dvh ">Herilala Dolly MIADA</h1>
+        <h1 style="font-size: 10dvh ">Développeur <span style="color: mediumpurple">PhP</span>|<span style="color:#0dc0d4;">Flutter</span></h1>
+    </div>
+</section>
+<!--landing screen end-->
+<!-- about screen start-->
+<section class="section justify-content-between" id="about">
+    <div class="d-flex">
+        <div class="d-flex flex-column py-5 my-lg-5 mx-5">
+            <span style="font-size: 1.8rem" class="mb-1">Bonjour, Je m'appelle Herilala Dolly Miada, j'ai actuellement 21 ans et je suis en 2ème année de BTS Service Informatique aux Organisations option Solution Logicielle et Application Métier.</span>
+            <span style="font-size: 1.8rem" class="mb-1">J'ai choisi cette option, car depuis mon plus jeune âge j'ai été intéréssé par l'informatique, commençant par  une passion pour les jeux vidéos.</span>
+            <span style="font-size: 1.8rem" class="mb-1">C'est un peu plus tard au collège que j'ai découvert le monde de la programmation, qui m'a intéréssé, suite à celà j'ai voulu en faire un métier.</span>
+            <span style="font-size: 1.8rem" class="mb-1">A l'avenir, je souhaite continuer mes études dans l'Intélligence Artificielle ou Le Système Informatique en Banque.</span>
         </div>
+        <img class="my-lg-5 mx-5" width="450" height="468" src="assets/images/squarephoto.jpg" alt="Selfie">
+    </div>
+    <div id="tracker" class="mx-lg-5 d-flex justify-content-between">
+        <div class="text-center"><span style="font-size: 1.8rem">2019-2020</span><p style="font-size: 1.4rem">Obtention du Baccalauréat Série Economique et Social</p></div>
+        <div class="text-center"><span style="font-size: 1.8rem">2020-2021</span><p style="font-size: 1.4rem">1ère année de BTS SIO en formation initiale auprès de CFA INGETIS</p></div>
+        <div class="text-center"><span style="font-size: 1.8rem">2021-2022</span><p style="font-size: 1.4rem">2ème année de BTS SIO/SLAM en formation intiale</p></div>
+        <div class="text-center"><span style="font-size: 1.8rem">2022-2023</span><p style="font-size: 1.4rem">2ème année de BTS SIO/SLAM en alternance auprès de PopsiCube</p></div>
+    </div>
+</section>
+<!-- about screen end-->
+<!-- experiences screen start-->
+<section class="section d-flex align-items-center" id="experiences">
+    <!-- Button trigger modal -->
+    <div id="skills" class="d-flex justify-content-around mx-4">
+        <div class="border border-primary text-center" data-bs-target="#cv" data-bs-toggle="modal"><img src="assets/images/cv.jpg" class="mt-3" width="90%"><br><span style="font-size: 1.5rem">Afficher les Compétences/CV</span></div>
+        <div class="border border-primary text-center" data-bs-target="#entreprise" data-bs-toggle="modal"><img src="assets/images/startup.jpg" class="mt-3" width="90%"><br><span style="font-size: 1.5rem">Afficher le projet d'entreprise</span></div>
+        <div class="border border-primary text-center" data-bs-target="#project" data-bs-toggle="modal"><img src="assets/images/personal.png" class="mt-3" width="60%"><br><span class="px-3x" style="font-size: 1.5rem">Afficher les Projets réalisés au cours de la seconde année de formation</span></div>
+    </div>
 
-    <a id="chevron" href="#about">
-        <i class="fa fa-solid fa-chevron-down chevicon" style="color: white; font-size: 50px"></i>
-    </a>
-    </section>
-
-    <section id="about" class="sectionwidth theme">
-        <div class="title"><p>A propos De Moi</p></div>
-        <div id="container">
-            <img id="profilep" src="assets/images/squarephoto.jpg">
-            <div id="one">
-                <p>2019-2020</p>
-                <div class="filler"></div>
-                <p>Obtention du Baccalauréat Serie Economique et Social</p>
-            </div>
-            <div id="two">
-                <p>2020-2021</p>
-                <div class="filler"></div>
-                <p>1ère Année de BTS SIO en Tronc Commun entre Administration Système & Réseau et Développement</p>
-            </div>
-            <div id="me"><p>Je suis Actuellement en 2ème année de BTS-SIO option Solution Logicielle et Application Métier.
-                J'ai Choisi cette option car le développement m'a intéressé depuis plusieurs années maintenant. Plus tard Je souhaiterais
-                axer mes études vers la Cryptographie\Blockchain</p>
+    <!-- Modal -->
+    <div class="modal fade"  id="cv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog"  role="document">
+            <div class="modal-content mb-3" style="width: 50dvw;height: 80dvh; margin-left: -15vw">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compétences| CV</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mb-3">
+                    Au cours de mon cursus, j'ai eu l'occasion de découvrir la fondation du développement WEB (HTML/CSS/JS). Avec cela j'ai essentiellement travaillé en Php et en Dart et son Framwork FLutter
+                    <object data="assets/images/Cvfinal.pdf" type="application/pdf" width="100%" height="100%">
+                        <p>Unable to display PDF file. <a href="assets/images/Cvfinal.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="skill" class="sectionwidth">
-        <div class="title"><p>Mes Compétences</p></div>
-
-    </section>
-
-    <section id="projects" class="sectionwidth">
-    </section>
-
-    <section id="techno">
-    </section>
+    </div>
+    <!-- Modal: entreprise-->
+    <div class="modal fade"  id="entreprise" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog"  role="document">
+            <div class="modal-content mb-3" style="width: 50dvw;height: 80dvh; margin-left: -15vw">
+                <div class="modal-header">
+                    <h5 class="modal-title">Projet D'entreprise</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mb-3">
+                    Durant ma deuxième année en alternance chez Popsicube, je me suis occupé, de la création au déploiement, d'une application Sous symfony ayant pour but de tracer les applications des clients géré par l'entreprise, mais aussi des informations des serveurs acquis.
+                    <object data="assets/images/login.pdf" type="application/pdf" width="100%" height="100%">
+                        <p>Unable to display PDF file. <a href="assets/images/Cvfinal.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal: project-->
+    <div class="modal fade"  id="project" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog"  role="document">
+            <div class="modal-content mb-3" style="width: 50dvw;height: 80dvh; margin-left: -15vw">
+                <div class="modal-header">
+                    <h5 class="modal-title">Projets Réalisés</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mb-3">
+                    Au cours de mon cursus, j'ai eu l'occasion de découvrir la fondation du développement WEB (HTML/CSS/JS). Avec cela j'ai essentiellement travaillé en Php et en Dart et son Framwork FLutter
+                    <object data="assets/images/Cvfinal.pdf" type="application/pdf" width="100%" height="100%">
+                        <p>Unable to display PDF file. <a href="assets/images/Cvfinal.pdf">Download</a> instead.</p>
+                    </object>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- experiences screen end-->
+<!-- techno screen start-->
+<section class="section" id="techno">
+</section>
+<!-- techno screen end-->
 </body>
 </html>
